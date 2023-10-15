@@ -19,3 +19,6 @@ INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
     ('Médico'),
     ('Administrador'),
     ('Paciente');
+
+INSERT INTO Usuarios (user_Name, user_Senha, tipo_Usuario_ID)
+SELECT 'admin', 'admin', (SELECT tipo_Usuario_ID FROM Tipos_Usuarios WHERE tipo_Usuario_Nome = 'Administrador')
