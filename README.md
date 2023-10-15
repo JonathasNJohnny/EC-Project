@@ -16,7 +16,7 @@
   <li><a href="">Matriz de Competências</a></li>
   <li><a href="">Plano de Releases</a></li>
   <li><a href="">Plano da Iteração</a></li>
-  <li><a href="https://github.com/JonathasNJohnny/EC-Project">Código-Fonte Aqui Mesmo</a></li>
+  <li><a href="https://github.com/JonathasNJohnny/EC-Project">Código-Fonte</a></li>
   <li><a href="">Big Chart</a></li>
   <li><a href="">Analise de Riscos</a></li>
   <li><a href="">Teste de Usabilidade</a></li>
