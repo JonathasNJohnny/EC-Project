@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS Usuarios CASCADE;
+DROP TABLE IF EXISTS Tipos_Usuarios CASCADE;
+
 create table Tipos_Usuarios (
 tipo_Usuario_ID SERIAL PRIMARY KEY,
 tipo_Usuario_Nome varchar(50) not null
