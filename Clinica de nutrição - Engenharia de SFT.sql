@@ -16,7 +16,7 @@ FOREIGN KEY (tipo_Usuario_ID) references Tipos_Usuarios(tipo_Usuario_ID)
 
 INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
     ('Recepcionista'),
-    ('Médico'),
+    ('Medico'),
     ('Administrador'),
     ('Paciente');
 
