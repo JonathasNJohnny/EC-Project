@@ -2,22 +2,23 @@
 <h3>Projeto de Engenharia da Computação - Clínica</h3>
 <hr>
 <ul>
-  <li>Definição de Papéis: https://docs.google.com/document/d/1OT3Bnj4pqH_qh2i59x1jAgVmpE3IT_cQGXPYRQVbo5U/edit</li>
-  <li>Descrição do Sistema: </li>
-  <li>Requisitos Funcionais: https://docs.google.com/document/d/1C9LCXwGyiuckhepwHe1_EewcHcIkj1sikBYPmMR63-0/edit?usp=sharing</li>
-  <li>Requisitos Não Funcionais: https://docs.google.com/document/d/1kqsTfyCfEJ5TkfWhFkhnw0n7VagaWAin0W_QYyh3APE/edit?usp=sharing</li>
-  <li>Perfil do Usuário: </li>
-  <li>Objetivos de Usabilidade: </li>
-  <li>Modelo de Tarefa: </li>
-  <li>User Stories e Testes de Aceitação: </li>
-  <li>Protótipo da Interface: </li>
-  <li>Projeto Arquitetural: </li>
-  <li>Modelo Lógico de Dados: </li>
-  <li>Matriz de Competências: </li>
-  <li>Plano de Releases: </li>
-  <li>Plano da Iteração: </li>
-  <li>Código-Fonte: <a href="https://github.com/JonathasNJohnny/EC-Project">Aqui Mesmo</a></li>
-  <li>Big Chart: </li>
-  <li>Analise de Riscos: </li>
-  <li>Teste de Usabilidade: </li>
+  <li><a href="https://docs.google.com/document/d/1OT3Bnj4pqH_qh2i59x1jAgVmpE3IT_cQGXPYRQVbo5U/edit">Definição de Papéis</a></li>
+  <li><a href="">Descrição do Sistema</a></li>
+  <li><a href="https://docs.google.com/document/d/1C9LCXwGyiuckhepwHe1_EewcHcIkj1sikBYPmMR63-0/edit?usp=sharing">Requisitos Funcionais</a></li>
+  <li><a href="https://docs.google.com/document/d/1kqsTfyCfEJ5TkfWhFkhnw0n7VagaWAin0W_QYyh3APE/edit?usp=sharing">Requisitos Não Funcionais</a></li>
+  <li><a href="">Perfil do Usuário</a></li>
+  <li><a href="">Objetivos de Usabilidade</a></li>
+  <li><a href="">Modelo de Tarefa</a></li>
+  <li><a href="">User Stories e Testes de Aceitação</a></li>
+  <li><a href="">Protótipo da Interface</a></li>
+  <li><a href="">Projeto Arquitetural</a></li>
+  <li><a href="">Modelo Lógico de Dados</a></li>
+  <li><a href="">Matriz de Competências</a></li>
+  <li><a href="">Plano de Releases</a></li>
+  <li><a href="">Plano da Iteração</a></li>
+  <li><a href="https://github.com/JonathasNJohnny/EC-Project">Código-Fonte Aqui Mesmo</a></li>
+  <li><a href="">Big Chart</a></li>
+  <li><a href="">Analise de Riscos</a></li>
+  <li><a href="">Teste de Usabilidade</a></li>
 </ul>
+
