@@ -4,8 +4,8 @@
 <ul>
   <li>Definição de Papéis: https://docs.google.com/document/d/1OT3Bnj4pqH_qh2i59x1jAgVmpE3IT_cQGXPYRQVbo5U/edit</li>
   <li>Descrição do Sistema: </li>
-  <li>Requisitos Funcionais: </li>
-  <li>Requisitos Não Funcionais: </li>
+  <li>Requisitos Funcionais: https://docs.google.com/document/d/1C9LCXwGyiuckhepwHe1_EewcHcIkj1sikBYPmMR63-0/edit?usp=sharing</li>
+  <li>Requisitos Não Funcionais: https://docs.google.com/document/d/1kqsTfyCfEJ5TkfWhFkhnw0n7VagaWAin0W_QYyh3APE/edit?usp=sharing</li>
   <li>Perfil do Usuário: </li>
   <li>Objetivos de Usabilidade: </li>
   <li>Modelo de Tarefa: </li>
