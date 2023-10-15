@@ -11,4 +11,8 @@ tipo_Usuario_ID int,
 FOREIGN KEY (tipo_Usuario_ID) references Tipos_Usuarios(tipo_Usuario_ID)
 );
 
-select * from Usuarios
+INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
+    ('Recepcionista'),
+    ('Médico'),
+    ('Administrador'),
+    ('Paciente');
