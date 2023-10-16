@@ -26,15 +26,16 @@ def getUser(username, password):
         return usuario
     except Usuarios.DoesNotExist:
         return None
-user = getUser(username, password)
-if user:
-    if user.tipo_usuario_id.tipo_usuario_id == receptionistID:
-        receptionistUser()
-    elif user.tipo_usuario_id.tipo_usuario_id == doctorID:
-        doctorUser()
-    elif user.tipo_usuario_id.tipo_usuario_id == administratorID:
-        administratorUser()
-    elif user.tipo_usuario_id.tipo_usuario_id == patientID:
-        patientUser()
-else:
-    print("Nome de usuário ou senha estão incorretos")
+def login():
+    user = getUser(username, password)
+    if user:
+        if user.tipo_usuario_id.tipo_usuario_id == receptionistID:
+            receptionistUser()
+        elif user.tipo_usuario_id.tipo_usuario_id == doctorID:
+            doctorUser()
+        elif user.tipo_usuario_id.tipo_usuario_id == administratorID:
+            administratorUser()
+        elif user.tipo_usuario_id.tipo_usuario_id == patientID:
+            patientUser()
+    else:
+        print("Nome de usuário ou senha estão incorretos")
