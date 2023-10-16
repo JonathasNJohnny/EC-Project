@@ -20,13 +20,13 @@ def administratorUser():
 def patientUser():
     print("Seja bem vindo ao seu perfil de Paciente!")
 
-def login(username, password):
+def getUser(username, password):
     try:
         usuario = Usuarios.get((Usuarios.user_name == username) & (Usuarios.user_senha == password))
         return usuario
     except Usuarios.DoesNotExist:
         return None
-user = login(username, password)
+user = getUser(username, password)
 if user:
     if user.tipo_usuario_id.tipo_usuario_id == receptionistID:
         receptionistUser()
