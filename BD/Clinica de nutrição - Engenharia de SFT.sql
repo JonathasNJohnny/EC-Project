@@ -10,6 +10,7 @@ create table Usuarios (
 user_ID SERIAL PRIMARY KEY,
 user_Name varchar(50) not null,
 user_Senha varchar(50) not null,
+cpf varchar (50) not null,
 tipo_Usuario_ID int,
 FOREIGN KEY (tipo_Usuario_ID) references Tipos_Usuarios(tipo_Usuario_ID)
 );
@@ -20,5 +21,5 @@ INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
     ('Administrador'),
     ('Paciente');
 
-INSERT INTO Usuarios (user_Name, user_Senha, tipo_Usuario_ID)
+INSERT INTO Usuarios (user_Name, user_Senha, cpf, tipo_Usuario_ID)
 SELECT 'admin', 'admin', (SELECT tipo_Usuario_ID FROM Tipos_Usuarios WHERE tipo_Usuario_Nome = 'Administrador')
