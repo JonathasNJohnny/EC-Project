@@ -22,4 +22,4 @@ INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
     ('Paciente');
 
 INSERT INTO Usuarios (user_Name, user_Senha, cpf, tipo_Usuario_ID)
-SELECT 'admin', 'admin', '000.000.000-00', (SELECT tipo_Usuario_ID FROM Tipos_Usuarios WHERE tipo_Usuario_Nome = 'Administrador')
+SELECT 'admin', 'admin', '00000000000', (SELECT tipo_Usuario_ID FROM Tipos_Usuarios WHERE tipo_Usuario_Nome = 'Administrador')
