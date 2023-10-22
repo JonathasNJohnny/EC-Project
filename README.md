@@ -6,8 +6,11 @@ always remember to create a server.py flask-server file.
 
 Runs the flask-server, use this command in the project directory.
 
+### `http://localhost:5000`
+
 Open [http://localhost:5000](http://localhost:5000) to view it on your browser.
-Or add the flask-server proxy to your project, example: "proxy": "http://localhost:5000".
+Or add the flask-server proxy to your project.
+example: <b>"proxy": "ht<span>tp://localhost:5000"</span></b>
 
 
 ### If you need to check the flask documentations, you can access it here: [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
