@@ -14,6 +14,6 @@ example: <b>"proxy": "ht<span>tp://localhost:5000"</span></b>
 
 <hr>
 
-### If you need to check the flask documentations, you can access it here: [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
+<b>If you need to check the flask documentations, you can access it here: [https://flask.palletsprojects.com/en/3.0.x/](https://flask.palletsprojects.com/en/3.0.x/)
 
-### Video that helped me create this flask-server: https://www.youtube.com/watch?v=6r_QBgq-seA<br>obs, i needed to adapt it to my project
+Video that helped me create this flask-server: https://www.youtube.com/watch?v=6r_QBgq-seA<br>obs, i needed to adapt it to my project</b>
