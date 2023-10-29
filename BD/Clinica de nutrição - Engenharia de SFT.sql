@@ -38,7 +38,7 @@ INSERT INTO Enderecos (cidade, UF, bairro, rua)
 VALUES 
 	('adminCity', 
 	'AD', 
-	'admiNeighborhood', 
+	'adminNeighborhood', 
 	'adminStreet'
    );
 
