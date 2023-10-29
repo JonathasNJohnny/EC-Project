@@ -1,7 +1,7 @@
 from schemes.schemes import*
 
 #Criação de usuário
-def createUser(username, password,cpf,typeUser):
+def createUser(username, password, cpf, typeUser):
     try:
         # Verificar se o nome de usuário já existe
         existing_user = Usuarios.get_or_none(Usuarios.user_name == username)
