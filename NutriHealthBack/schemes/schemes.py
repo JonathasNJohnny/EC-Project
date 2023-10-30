@@ -32,5 +32,16 @@ class Usuarios(Model):
     class Meta:
         database = db
 
+class Consultas(Model):
+    consultas_id = IntegerField(primary_key=True)
+    data = DateField(null=False)
+    horario = CharField(max_length=50, null=False)
+    medico_id = ForeignKeyField(Usuarios, field='user_id', backref='usuarios')
+    paciente_id = ForeignKeyField(Usuarios, field='user_id', backref='usuarios')
+
+    class Meta:
+        database = db
+        table_name = 'consultas'
+
 db.connect()
 db.close()
