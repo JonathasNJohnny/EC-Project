@@ -15,6 +15,16 @@ CREATE TABLE Enderecos (
     rua VARCHAR(50) NOT NULL
 );
 
+create table Consultas (
+consultas_ID int primary key,
+data date not null,
+horario varchar(50) not null,
+medico_ID int,
+paciente_ID int,
+FOREIGN KEY (medico_ID) references Usuarios(user_ID),
+FOREIGN KEY (paciente_ID) references Usuarios(user_ID)
+);
+
 CREATE TABLE Usuarios (
     user_ID SERIAL PRIMARY KEY,
     user_Name VARCHAR(50) NOT NULL,
