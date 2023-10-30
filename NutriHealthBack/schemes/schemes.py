@@ -34,10 +34,11 @@ class Usuarios(Model):
 
 class Consultas(Model):
     consultas_id = IntegerField(primary_key=True)
-    data = DateField(null=False)
-    horario = CharField(max_length=50, null=False)
     medico_id = ForeignKeyField(Usuarios, field='user_id', backref='usuarios')
     paciente_id = ForeignKeyField(Usuarios, field='user_id', backref='usuarios')
+    data = DateField(null=False)
+    horario = CharField(max_length=50, null=False)
+    dados = CharField(max_length=250, null=True)
 
     class Meta:
         database = db
