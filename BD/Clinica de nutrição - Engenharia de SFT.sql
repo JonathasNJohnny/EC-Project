@@ -30,7 +30,7 @@ CREATE TABLE Usuarios (
 );
 
 create table Consultas (
-consultas_ID int primary key,
+consultas_ID SERIAL PRIMARY KEY,
 medico_ID int,
 paciente_ID int,
 data varchar(50) not null,
