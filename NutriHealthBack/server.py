@@ -40,12 +40,15 @@ def create_user_route():
 #Rota para criar uma consulta
 @app.route("/api/createAppointment", methods=['POST'])
 def create_appointment_route():
-    medico_id = int(request.form.get('medico_id'))
-    paciente_id = int(request.form.get('paciente_id'))
-    data = request.form.get('data')
-    horario = request.form.get('horario')
-    dados = request.form.get('dados')
-    return createAppointment(medico_id, paciente_id, data, horario, dados)
+    if request.method == 'POST':
+        dataJson = request.get_json()
+        medico_id = dataJson.get('medico_id')
+        paciente_id = dataJson.get('paciente_id')
+        data = dataJson.get('data')
+        horario = dataJson.get('horario')
+        dados = dataJson.get('dados')
+        result = createAppointment(medico_id, paciente_id, data, horario, dados)
+        return result
 
 if __name__ == "__main__":
     app.run(debug=True)
