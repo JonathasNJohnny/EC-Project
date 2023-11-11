@@ -30,7 +30,7 @@ CREATE TABLE Usuarios (
 );
 
 create table Consultas (
-consultas_ID int primary key,
+consultas_ID SERIAL PRIMARY KEY,
 medico_ID int,
 paciente_ID int,
 data varchar(50) not null,
@@ -57,7 +57,7 @@ VALUES
 
 INSERT INTO Usuarios (user_Name, user_Senha, user_Email, user_NUmero, cpf, tipo_Usuario_ID, endereco_ID)
 VALUES (
-	'admin', 
+	'ADMIN', 
 	'admin', 
 	'admin@admin.admin', 
 	'(00) 00 00000-0000',

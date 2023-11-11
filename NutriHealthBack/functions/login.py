@@ -14,7 +14,7 @@ def getJson(userID, userTypeID):
 # Função para retornar o usuário
 def getUser(username, password):
     try:
-        user = Usuarios.get((Usuarios.user_name == username) & (Usuarios.user_senha == password))
+        user = Usuarios.get((Usuarios.user_name == username.upper()) & (Usuarios.user_senha == password))
         return user
     except Usuarios.DoesNotExist:
         return None
