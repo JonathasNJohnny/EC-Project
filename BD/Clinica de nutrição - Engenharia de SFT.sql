@@ -35,6 +35,7 @@ medico_ID int,
 paciente_ID int,
 data varchar(50) not null,
 horario varchar(50) not null,
+motivo varchar(250),
 dados varchar(250),
 FOREIGN KEY (medico_ID) references Usuarios(user_ID),
 FOREIGN KEY (paciente_ID) references Usuarios(user_ID)
