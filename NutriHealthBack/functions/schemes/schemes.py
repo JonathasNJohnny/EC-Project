@@ -1,6 +1,6 @@
 from peewee import *
 
-db = PostgresqlDatabase('clinic', user='postgres', password='mk875', host='localhost', port=5432)
+db = PostgresqlDatabase('clinic', user='postgres', password='12345678', host='localhost', port=5432)
 class TiposUsuarios(Model):
     tipo_usuario_id = IntegerField(primary_key=True)
     tipo_usuario_nome = CharField(max_length=50, null=False)
