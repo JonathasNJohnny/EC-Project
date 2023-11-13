@@ -63,8 +63,8 @@ def get_appointments_route():
 def update_appointment_data():
     appointmentID = request.json.get('consulta_id')
     newData = request.json.get('dados')
-
     result = updateAppointmentData(appointmentID, newData)
+    return result
 
 if __name__ == "__main__":
     app.run(debug=True)
