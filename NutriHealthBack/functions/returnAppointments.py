@@ -13,3 +13,14 @@ def getAllAppointments():
             'data': appointment.dados
         } for appointment in appointmentDB]
     return appointmentList
+
+
+def getAppointment(appointmentID):
+    appointment = Consultas.get_by_id(appointmentID)
+    appointmentInfo = {
+        'appointmentID': appointment.consultas_id,
+        'patientName':appointment.paciente_id.user_name,
+        'date': appointment.data,
+        'data': appointment.dados
+    }
+    return appointmentInfo
