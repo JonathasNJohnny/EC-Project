@@ -39,6 +39,7 @@ class Consultas(Model):
     data = DateField(null=False)
     horario = CharField(max_length=50, null=False)
     dados = CharField(max_length=250, null=True)
+    motivo = CharField(max_length=250, null=True)
 
     class Meta:
         database = db

@@ -3,6 +3,9 @@ from functions.login import login
 from functions.returnUsers import getAllUsers
 from functions.createUser import createUser
 from functions.createAppointment import createAppointment
+from functions.returnAppointments import getAllAppointments
+from functions.returnAppointments import getAppointment
+from functions.updateAppointmentData import updateAppointmentData
 
 app = Flask(__name__)
 
@@ -49,6 +52,27 @@ def create_appointment_route():
         dados = dataJson.get('dados')
         result = createAppointment(medico_id, paciente_id, data, horario, dados)
         return result
+    
+#Rota para obter todas as consultas
+@app.route("/api/getAppointments", methods=['GET'])
+def get_appointments_route():
+    result = getAllAppointments()
+    return jsonify(result)
+
+#Rota para obter uma única consulta
+@app.route("/api/getAppointment", methods=['GET'])
+def get_appointment_route():
+    appointmentID = request.args.get('appointment_id')
+    result = getAppointment(appointmentID)
+    return jsonify(result)
+
+#Rota para atualizar dados de uma consulta
+@app.route("/api/updateAppointmentData", methods=['PUT'])
+def update_appointment_data():
+    appointmentID = request.json.get('consulta_id')
+    newData = request.json.get('dados')
+    result = updateAppointmentData(appointmentID, newData)
+    return result
 
 if __name__ == "__main__":
     app.run(debug=True)
