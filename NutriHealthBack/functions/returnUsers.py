@@ -1,5 +1,4 @@
 from schemes.schemes import *
-import json
 
 def getAllUsers():
     usersBD = Usuarios.select()
