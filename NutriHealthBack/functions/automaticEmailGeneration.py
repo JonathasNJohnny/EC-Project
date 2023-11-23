@@ -49,7 +49,7 @@ def enviar_email():
         # Enviar o email
         server.sendmail(remetente, destinatario, msg.as_string())
 
-    print('Email enviado com sucesso!')
+    print('Email enviado com sucesso!!')
 
 # Chame a função para enviar o email
 enviar_email()
