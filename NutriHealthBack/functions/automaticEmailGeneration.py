@@ -1,40 +1,31 @@
-import random
-import string
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
-#função para geração de senhas
-def gerar_senha(tamanho=8):
-  caracteres = string.ascii_letters + string.digits + string.punctuation
-  senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
-  return senha
+from functions.generateRandomPassword import generatePassword
 
 
-def enviar_email():
+def sendEmail(name, email):
     # Configurações do servidor SMTP do Gmail
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    remetente = "nutrihealth59@gmail.com"
-    senha = "hrxb kmpb avnl fyol"  # Substitua com sua senha ou senha de aplicativo
-    destinatario = "kauamarques52@outlook.com" #substitua  destinatário pelo usuário que esteja fazendo login
+    password = "hrxb kmpb avnl fyol"
+    sender = "nutrihealth59@gmail.com"
+    receiver = email
 
-
-    # Vamos gerar uma senha de 8 caracteres
-    senha_gerada = gerar_senha(8)
+    userPassword = generatePassword()
   
     # Corpo do email em formato HTML
-    corpo_email = """
-    <p>olá Kauã,</p>
-    <p>Segue o exemplo de teste de emails automáticos </p>
-    <p>Sua senha é: {}</p>
-    """.format(senha_gerada)
+    corpo_email = f"""
+    <p>olá {name},</p>
+    <p>Seja bem vindo a NutriHealth! </p>
+    <p>Sua senha gerada é: {userPassword}</p>
+    """
 
     # Criar o objeto MIMEMultipart
     msg = MIMEMultipart()
-    msg['Subject'] = "Teste de email"
-    msg['From'] = remetente
-    msg['To'] = destinatario
+    msg['Subject'] = "NutriHealth, Boas Vindas!"
+    msg['From'] = sender
+    msg['To'] = receiver
 
     # Adicionar corpo do email ao objeto MIMEMultipart
     msg.attach(MIMEText(corpo_email, 'html'))
@@ -44,12 +35,10 @@ def enviar_email():
         server.starttls()  # Use TLS para segurança
 
         # Login com suas credenciais
-        server.login(remetente, senha)
+        server.login(sender, password)
 
         # Enviar o email
-        server.sendmail(remetente, destinatario, msg.as_string())
+        server.sendmail(sender, receiver, msg.as_string())
 
-    print('Email enviado com sucesso!!')
-
-# Chame a função para enviar o email
-enviar_email()
+    print('Email successfully sent!!')
+    return userPassword

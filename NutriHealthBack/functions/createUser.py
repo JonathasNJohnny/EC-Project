@@ -1,4 +1,5 @@
 from schemes.schemes import*
+from functions.automaticEmailGeneration import sendEmail
 
 #Criação de usuário
 def createUser(username, email, number, cpf, typeUser, addressCity, addressUF, addressNeighborhood, addressStreet):
@@ -12,7 +13,7 @@ def createUser(username, email, number, cpf, typeUser, addressCity, addressUF, a
         newEndereco=Enderecos.create(cidade = addressCity, uf = addressUF, bairro = addressNeighborhood, rua = addressStreet)
 
         #Criar um novo usuário
-        newUser = Usuarios.create(user_name=username.upper(), user_senha="12345678", user_email=email, user_numero=number, cpf=cpf, tipo_usuario_id=TiposUsuarios.get(TiposUsuarios.tipo_usuario_nome == typeUser).tipo_usuario_id, endereco_id=newEndereco)
+        newUser = Usuarios.create(user_name=username.upper(), user_senha=sendEmail(username, email), user_email=email, user_numero=number, cpf=cpf, tipo_usuario_id=TiposUsuarios.get(TiposUsuarios.tipo_usuario_nome == typeUser).tipo_usuario_id, endereco_id=newEndereco)
         return "1"
     except Exception as e:
         return "3"
