@@ -15,9 +15,9 @@ def sendEmail(name, email):
     userPassword = generatePassword()
   
     # Corpo do email em formato HTML
-    corpo_email = f"""
+    emailBody = f"""
     <p>olá {name},</p>
-    <p>Seja bem vindo a NutriHealth! </p>
+    <p>Seja bem vindo ao NutriHealth! </p>
     <p>Sua senha gerada é: {userPassword}</p>
     """
 
@@ -28,7 +28,7 @@ def sendEmail(name, email):
     msg['To'] = receiver
 
     # Adicionar corpo do email ao objeto MIMEMultipart
-    msg.attach(MIMEText(corpo_email, 'html'))
+    msg.attach(MIMEText(emailBody, 'html'))
 
     # Iniciar conexão SMTP
     with smtplib.SMTP(smtp_server, smtp_port) as server:
