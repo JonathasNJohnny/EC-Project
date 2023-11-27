@@ -37,9 +37,18 @@ data varchar(50) not null,
 horario varchar(50) not null,
 motivo varchar(250),
 dados varchar(250),
-arquivo_consulta BYTEA,
+arquivo_consulta BYTEA, -- Converte tipos de arquivo(PDF e outros) para binario
 FOREIGN KEY (medico_ID) references Usuarios(user_ID),
 FOREIGN KEY (paciente_ID) references Usuarios(user_ID)
+);
+
+create table Solicitar_Consulta(
+solicitação_ID SERIAL PRIMARY KEY,
+usuario_ID int,
+paciente_Nome varchar(250) not null,
+retorno boolean,
+consulta_Motivo varchar(250) not null,
+FOREIGN KEY (usuario_ID) references Usuarios(user_ID)
 );
 
 INSERT INTO Tipos_Usuarios (tipo_Usuario_Nome) VALUES
